@@ -1,0 +1,27 @@
+body {
+  background-color: #a0f2e2;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #d9fffb;
+}
