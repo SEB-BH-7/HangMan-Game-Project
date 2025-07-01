@@ -102,7 +102,6 @@ button {
   text-decoration: underline;
 }
 
-/* 🔽 Responsive Adjustments */
 @media (max-width: 600px) {
   .title {
     font-size: 3rem;
@@ -135,4 +134,98 @@ button {
   top: 95px;
   right: 35px;
   transform: rotate(45deg);
+}
+
+.left-leg {
+  top: 95px;
+  left: 35px;
+  transform: rotate(-45deg);
+}
+
+.right-leg {
+  top: 95px;
+  right: 35px;
+  transform: rotate(45deg);
+}
+
+body {
+  background-color: #a0f2e2;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2196f3;
+  text-shadow: 2px 2px #1565c0;
+  margin-bottom: 30px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid #333;
+  background-color: #add8ff;
+  color: #000;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #90e0ff;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.difficulty-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.difficulty-btn {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 12px;
+  background-color: #ffd700;
+  color: #000;
+  border: 2px solid #222;
+  transition: 0.2s ease-in-out;
+}
+
+.difficulty-btn:hover {
+  background-color: #ffec80;
 }
