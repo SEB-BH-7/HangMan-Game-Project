@@ -2,17 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hangman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HangMan</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Hangman</h1>
-    <button id="playBtn">Play</button>
-    <button id="helpBtn">HELP!</button>
-    <a href="contact.html">Contact Us</a>
+  <header>HOME</header>
+
+  <h1 class="title">HangMan</h1>
+
+  <div class="stickman">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="left-arm"></div>
+    <div class="right-arm"></div>
+    <div class="left-leg"></div>
+    <div class="right-leg"></div>
   </div>
+
+  <div class="buttons">
+    <button id="playBtn" class="play">Play</button>
+    <button id="helpBtn" class="help">HELP!</button>
+  </div>
+
+  <a href="contact.html" class="contact-link">contact us</a>
 
   <script src="app.js"></script>
 </body>
 </html>
+

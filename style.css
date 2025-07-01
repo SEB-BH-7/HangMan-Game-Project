@@ -1,27 +1,138 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #a0f2e2;
   font-family: 'Comic Sans MS', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
-.container {
-  margin-top: 100px;
+header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  color: #2196f3;
+  text-shadow: 4px 4px #1565c0;
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+.stickman {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.head {
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  border-radius: 50%;
+}
+
+.body {
+  width: 2px;
+  height: 50px;
+  background-color: blue;
+}
+
+.left-arm, .right-arm, .left-leg, .right-leg {
+  width: 2px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+}
+
+
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 300px;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 18px;
-  margin: 10px;
-  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 12px;
   border: none;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  transition: 0.2s ease;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-button:hover {
-  background-color: #d9fffb;
+.play {
+  background-color: #add8ff;
+  color: purple;
+  font-weight: bold;
+  border: 2px solid #444;
+}
+
+.help {
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
+  border: 2px solid #222;
+}
+
+.contact-link {
+  margin-top: auto;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: blue;
+  text-decoration: underline;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .buttons {
+    max-width: 100%;
+  }
+}
+
+.left-arm {
+  top: 60px;
+  left: 35px;
+  transform: rotate(-45deg);
+}
+
+.right-arm {
+  top: 60px;
+  right: 35px;
+  transform: rotate(45deg);
+}
+
+.left-leg {
+  top: 95px;
+  left: 35px;
+  transform: rotate(-45deg);
+}
+
+.right-leg {
+  top: 95px;
+  right: 35px;
+  transform: rotate(45deg);
 }
