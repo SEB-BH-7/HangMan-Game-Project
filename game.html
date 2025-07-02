@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Ahmed!!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .stickman.red .head,
+      .stickman.red .body,
+      .stickman.red .left-arm,
+      .stickman.red .right-arm,
+      .stickman.red .left-leg,
+      .stickman.red .right-leg {
+        border-color: red !important;
+        background: red !important;
+      }
+      #wrong-letters {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #d32f2f;
+        font-size: 1.1rem;
+        min-height: 24px;
+      }
+    </style>
+</head>
+
+<body>
+    <button class="exit-button" onclick="window.location.href='difficulty.html'">← Exit</button>
+    <h1 class="title3">Save Ahmed!</h1>
+    <div id="attempts" style="font-size:1.2rem; margin-bottom:10px;"></div>
+    <div id="wrong-letters"></div>
+    <div id="hangman-drawing"></div>
+    <div id="word"></div>
+    <div id="letters"></div>
+    <div id="message"></div>
+    <button id="restartBtn" style="display:none;">Restart</button>
+    
+    <script src="app.js"></script>
+</body>

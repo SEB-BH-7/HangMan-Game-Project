@@ -1,5 +1,7 @@
 🪢 Hangman – Save Ahmed!
 
+![Screenshot](screenshot.png)
+
 🕹️ Description
 This is a fun and simple Hangman game made with HTML, CSS, and JavaScript.
 The goal is to guess the hidden word before the stickman (Ahmed) gets hanged. Each wrong guess brings Ahmed closer to danger!

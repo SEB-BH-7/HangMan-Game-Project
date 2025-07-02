@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Difficulty</title>
   <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
 </head>
+
 <body>
 
-      <button onclick="window.location.href='index.html'">← Back</button>
+  <button onclick="window.location.href='Story.html'">← Back</button>
 
 
   <h1>Select Difficulty Level</h1>
 
   <div class="difficulty-options">
     <button class="difficulty-btn" data-difficulty="easy">Easy</button>
-    <button class="difficulty-btn" data-difficulty="medium">Medium</button>
-    <button class="difficulty-btn" data-difficulty="hard">Hard</button>
-    <button class="difficulty-btn" data-difficulty="extreme">Extreme</button>
   </div>
 
+  <button class="difficulty-btn-later" data-difficulty="medium">Medium</button>
+  <button class="difficulty-btn-later" data-difficulty="hard">Hard</button>
+  <button class="difficulty-btn-later" data-difficulty="extreme">Extreme</button>
+
   <script>
-    
+
+    const difficultyBtns = document.querySelectorAll('.difficulty-btn');
+    difficultyBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const difficulty = this.getAttribute('data-difficulty');
+        localStorage.setItem('difficulty', difficulty);
+        window.location.href = 'game.html';
+      });
+    });
+
+
   </script>
 
 </body>
+
 </html>
