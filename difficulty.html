@@ -5,38 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Difficulty</title>
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css">
-  <script src="app.js"></script>
 </head>
 
 <body>
 
+  <!-- Header section with navigation -->
+  <header class="header">
+    <a href="difficulty.html" class="logo">Select Difficulty</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Back button to return to Story.html -->
   <button onclick="window.location.href='Story.html'">← Back</button>
 
-
+  <!-- Page heading -->
   <h1>Select Difficulty Level</h1>
 
+  <!-- Difficulty selection buttons -->
   <div class="difficulty-options">
     <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+    <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+    <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+    <button class="difficulty-btn" data-difficulty="extreme">Extreme</button>
   </div>
 
-  <button class="difficulty-btn-later" data-difficulty="medium">Medium</button>
-  <button class="difficulty-btn-later" data-difficulty="hard">Hard</button>
-  <button class="difficulty-btn-later" data-difficulty="extreme">Extreme</button>
-
-  <script>
-
-    const difficultyBtns = document.querySelectorAll('.difficulty-btn');
-    difficultyBtns.forEach(btn => {
-      btn.addEventListener('click', function () {
-        const difficulty = this.getAttribute('data-difficulty');
-        localStorage.setItem('difficulty', difficulty);
-        window.location.href = 'game.html';
-      });
-    });
-
-
-  </script>
+  <!-- Link to external JavaScript file -->
+  <script src="app.js"></script>
 
 </body>
 

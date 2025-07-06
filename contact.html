@@ -5,25 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Back button to return to the homepage -->
   <button id="back-button" onclick="window.location.href='index.html'">← Back</button>
 
   <h1>Contact Us</h1>
 
+  <!-- Contact form -->
   <form onsubmit="alert('Thanks for your message!'); return false;">
+    <!-- Name input field -->
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" required><br><br>
 
+    <!-- Email input field -->
     <label for="email">Email:</label><br>
     <input type="email" id="email" name="email" required><br><br>
 
+    <!-- Message textarea field -->
     <label for="message">Message:</label><br>
     <textarea id="message" name="message" required></textarea><br><br>
 
+    <!-- Submit button -->
     <button type="submit">Send Message</button>
   </form>
 

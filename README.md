@@ -1,66 +1,50 @@
-🪢 Hangman – Save Ahmed!
+# 🪢 Hangman – Save Ahmed!
 
-![Screenshot](screenshot.png)
+![Screenshot][def]
 
-🕹️ Description
-This is a fun and simple Hangman game made with HTML, CSS, and JavaScript.
-The goal is to guess the hidden word before the stickman (Ahmed) gets hanged. Each wrong guess brings Ahmed closer to danger!
+## 🕹️ Description
 
-Includes:
+Hangman – Save Ahmed! is a fun and interactive browser game built with HTML, CSS, and JavaScript. Your mission: guess the hidden word before the stickman (Ahmed) meets his fate! Each incorrect guess brings Ahmed closer to danger, so think carefully!
 
-A clean animated homepage
+**Features:**
+- Animated, clean homepage
+- Difficulty selection (Easy, Medium, Hard)
+- Contact form
+- Help popup
+- Unique character story twist
 
-Difficulty selection
+## 🚀 Getting Started
 
-Contact form
+- **Play it here:** _[Link coming soon!]_
 
-Help popup
+- **Planning Materials:**
+    - User Stories
+    - Wireframe
+    - How to Play
 
-Character story twist!
+## 🎮 How to Play
 
-🚀 Getting Started
-👉 Play it here: (i will add the link later)
+1. Click **Play** on the homepage.
+2. Select your preferred difficulty.
+3. Guess letters to reveal the hidden word.
+4. Each wrong guess adds a piece to Ahmed’s hangman.
+5. Save Ahmed before it’s too late!
 
-👉 Planning Materials:
+## 💡 Technologies Used
 
-User Stories
+- HTML
+- CSS (Responsive, Flexbox)
+- JavaScript (Vanilla)
+- `localStorage` for difficulty tracking
 
-Wireframe
+## 📚 Attributions
 
-How to Play
+- Font: Comic Sans MS
+- Emojis: Unicode
+- Inspired by the classic Hangman game
 
-🎮 How to Play
-Click Play on the homepage.
+## 🚧 Next Steps
 
-Choose a difficulty level (Easy, Medium, Hard).
+- Add sounds or background music
 
-Start guessing letters to complete the hidden word.
-
-Each wrong guess adds a piece to Ahmed’s hangman.
-
-Save Ahmed before it’s too late!
-
-💡 Technologies Used
-HTML
-
-CSS (Responsive + Flexbox)
-
-JavaScript (Vanilla)
-
-localStorage for difficulty tracking
-
-📚 Attributions
-Font: Comic Sans MS
-
-Emojis from Unicode
-
-Project idea inspired by the classic Hangman game
-
-🚧 Next Steps
-Add word bank for each difficulty
-
-Draw full stickman animation (step by step)
-
-Add win/lose screen
-
-Add sounds or background music
+[def]: screenshot.png

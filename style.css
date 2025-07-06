@@ -5,6 +5,91 @@
   box-sizing: border-box;
 }
 
+/* =========================
+   Navbar Styles
+   ========================= */
+header.header {
+  width: 100vw;
+  background: linear-gradient(90deg, #2195f391 60%, #e0c3fc87 100%);
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  box-shadow: 0 2px 12px #2196f322;
+}
+
+/* Logo styles in navbar */
+header.header .logo {
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 32px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px #1565c0aa;
+}
+
+/* Navbar links container */
+header.header .navbar {
+  display: flex;
+  gap: 32px;
+  margin-right: 32px;
+}
+
+/* Navbar links */
+header.header .navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 1px;
+}
+
+/* Navbar link hover effect */
+header.header .navbar a:hover {
+  background: #fff;
+  color: #2196f3;
+  box-shadow: 0 2px 8px #2196f344;
+}
+
+/* Add space for fixed navbar */
+body {
+  padding-top: 90px;
+}
+
+/* =========================
+   Responsive Navbar
+   ========================= */
+@media (max-width: 700px) {
+  header.header {
+    flex-direction: column;
+    height: auto;
+    padding: 8px 0;
+  }
+
+  header.header .logo {
+    margin-left: 0;
+    margin-bottom: 6px;
+  }
+
+  header.header .navbar {
+    margin-right: 0;
+    gap: 12px;
+  }
+}
+
+/* =========================
+   Body and Typography
+   ========================= */
 body {
   background: linear-gradient(135deg, #a0f2e2 0%, #e0c3fc 100%);
   font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
@@ -19,7 +104,7 @@ body {
   transition: background 0.5s;
 }
 
-/* Typography */
+/* Header text styles */
 header {
   font-weight: bold;
   font-size: 1.3rem;
@@ -30,6 +115,7 @@ header {
   color: #333;
 }
 
+/* Main title */
 h1 {
   font-size: 2.7rem;
   color: #2196f3;
@@ -38,6 +124,7 @@ h1 {
   letter-spacing: 2px;
 }
 
+/* Large title */
 .title {
   font-size: 4.2rem;
   color: #2196f3;
@@ -47,6 +134,7 @@ h1 {
   font-family: 'Luckiest Guy', 'Comic Sans MS', cursive, sans-serif;
 }
 
+/* Secondary title */
 .title2 {
   font-size: 3.2rem;
   color: #ff1744;
@@ -54,13 +142,18 @@ h1 {
   margin-top: 100px;
 }
 
+/* Tertiary title */
 .title3 {
   font-size: 2.1rem;
   color: #ff0000;
   text-shadow: 3px 3px #f58a8a, 0 2px 8px #ff000055;
 }
 
-/* Buttons */
+/* =========================
+   Buttons
+   ========================= */
+
+/* Button container */
 .buttons {
   margin-top: 40px;
   display: flex;
@@ -70,13 +163,14 @@ h1 {
   max-width: 340px;
 }
 
+/* General button styles */
 button {
   padding: 1.1rem;
   font-size: 1.25rem;
   border-radius: 16px;
   border: none;
   cursor: pointer;
-  transition: all 0.18s cubic-bezier(.4,0,.2,1);
+  transition: all 0.18s cubic-bezier(.4, 0, .2, 1);
   font-weight: bold;
   border: 2px solid #333;
   background: linear-gradient(90deg, #add8ff 60%, #e0c3fc 100%);
@@ -86,12 +180,14 @@ button {
   letter-spacing: 1px;
 }
 
+/* Button hover effect */
 button:hover {
   background: linear-gradient(90deg, #90e0ff 60%, #d1b3ff 100%);
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 4px 18px #2196f344;
 }
 
+/* Play button */
 .play {
   background: linear-gradient(90deg, #add8ff 60%, #e0c3fc 100%);
   color: #7c21f3;
@@ -99,6 +195,7 @@ button:hover {
   border: 2px solid #444;
 }
 
+/* Help button */
 .help {
   background: linear-gradient(90deg, #ffd700 60%, #fff3b0 100%);
   color: #222;
@@ -106,10 +203,13 @@ button:hover {
   border: 2px solid #222;
 }
 
+/* Back button with extra padding */
 button.back-button {
   padding-top: 50px;
+
 }
 
+/* Exit button (fixed position) */
 .exit-button {
   position: fixed;
   top: 20px;
@@ -121,22 +221,20 @@ button.back-button {
   font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0 2px 10px #ff174433;
-  transition: 0.2s cubic-bezier(.4,0,.2,1);
+  transition: 0.2s cubic-bezier(.4, 0, .2, 1);
   z-index: 1100;
   padding: 0.7em 1.5em;
 }
 
+/* Exit button hover effect */
 .exit-button:hover {
   background: linear-gradient(90deg, #c40000 60%, #ff8a80 100%);
   transform: scale(1.07);
 }
 
-button2.back-button:hover {
-  background-color: #c40000;
-  transform: scale(1.05);
-}
-
-/* Contact Link */
+/* =========================
+   Contact Link
+   ========================= */
 .contact-link {
   margin-top: auto;
   margin-bottom: 12px;
@@ -150,7 +248,9 @@ button2.back-button:hover {
   color: #ff1744;
 }
 
-/* Forms */
+/* =========================
+   Forms
+   ========================= */
 form {
   max-width: 420px;
   margin: 0 auto;
@@ -161,6 +261,7 @@ form {
   border: 1.5px solid #2196f3;
 }
 
+/* Form label */
 label {
   display: block;
   font-size: 1.13rem;
@@ -170,6 +271,7 @@ label {
   letter-spacing: 0.5px;
 }
 
+/* Input and textarea fields */
 input,
 textarea {
   width: 100%;
@@ -182,17 +284,22 @@ textarea {
   transition: border 0.2s;
 }
 
+/* Focus effect for input/textarea */
 input:focus,
 textarea:focus {
   border: 2px solid #2196f3;
   outline: none;
 }
 
+/* Allow textarea resizing */
 textarea {
   resize: vertical;
 }
 
-/* Difficulty Buttons */
+/* =========================
+   Difficulty Buttons
+   ========================= */
+/* Difficulty button container */
 .difficulty-options {
   display: flex;
   justify-content: center;
@@ -200,6 +307,7 @@ textarea {
   gap: 22px;
 }
 
+/* Yellow difficulty button */
 .difficulty-btn {
   font-size: 1.2rem;
   padding: 16px 34px;
@@ -207,16 +315,18 @@ textarea {
   background: linear-gradient(90deg, #ffd700 60%, #fff3b0 100%);
   color: #222;
   border: 2px solid #222;
-  transition: 0.2s cubic-bezier(.4,0,.2,1);
+  transition: 0.2s cubic-bezier(.4, 0, .2, 1);
   font-weight: bold;
   box-shadow: 0 2px 8px #ffd70033;
 }
 
+/* Yellow difficulty button hover */
 .difficulty-btn:hover {
   background: linear-gradient(90deg, #ffec80 60%, #fff3b0 100%);
   transform: scale(1.05);
 }
 
+/* Red difficulty button */
 .difficulty-btn2 {
   font-size: 1.2rem;
   padding: 16px 34px;
@@ -224,17 +334,20 @@ textarea {
   background: linear-gradient(90deg, #ff1744 60%, #ff8a80 100%);
   color: #fff;
   border: 2px solid #222;
-  transition: 0.2s cubic-bezier(.4,0,.2,1);
+  transition: 0.2s cubic-bezier(.4, 0, .2, 1);
   font-weight: bold;
   box-shadow: 0 2px 8px #ff174433;
 }
 
+/* Red difficulty button hover */
 .difficulty-btn2:hover {
   background: linear-gradient(90deg, #c40000 60%, #ff8a80 100%);
   transform: scale(1.05);
 }
 
-/* Stickman 1 */
+/* =========================
+   Stickman 1 (Blue)
+   ========================= */
 .stickman {
   margin-top: 28px;
   display: flex;
@@ -244,6 +357,7 @@ textarea {
   min-height: 270px;
 }
 
+/* Head of stickman */
 .head {
   width: 100px;
   height: 100px;
@@ -253,6 +367,7 @@ textarea {
   box-shadow: 0 2px 8px #2196f344;
 }
 
+/* Body of stickman */
 .body {
   width: 6px;
   height: 100px;
@@ -260,6 +375,7 @@ textarea {
   margin-top: -4px;
 }
 
+/* Limbs of stickman */
 .left-arm,
 .right-arm,
 .left-leg,
@@ -271,31 +387,37 @@ textarea {
   border-radius: 4px;
 }
 
+/* Left arm position */
 .left-arm {
   top: 120px;
   left: 70px;
   transform: rotate(-40deg);
 }
 
+/* Right arm position */
 .right-arm {
   top: 120px;
   right: 70px;
   transform: rotate(40deg);
 }
 
+/* Left leg position */
 .left-leg {
   top: 190px;
   left: 70px;
   transform: rotate(-35deg);
 }
 
+/* Right leg position */
 .right-leg {
   top: 190px;
   right: 70px;
   transform: rotate(35deg);
 }
 
-/* Stickman 2 (Red) */
+/* =========================
+   Stickman 2 (Red)
+   ========================= */
 .stickman2 {
   margin-top: 28px;
   display: flex;
@@ -305,6 +427,7 @@ textarea {
   min-height: 270px;
 }
 
+/* Head of stickman2 */
 .head2 {
   width: 100px;
   height: 100px;
@@ -314,6 +437,7 @@ textarea {
   box-shadow: 0 2px 8px #ff174433;
 }
 
+/* Body of stickman2 */
 .body2 {
   width: 6px;
   height: 100px;
@@ -321,6 +445,7 @@ textarea {
   margin-top: -4px;
 }
 
+/* Limbs of stickman2 */
 .left-arm2,
 .right-arm2,
 .left-leg2,
@@ -332,31 +457,37 @@ textarea {
   border-radius: 4px;
 }
 
+/* Left arm2 position */
 .left-arm2 {
   top: 120px;
   left: 70px;
   transform: rotate(-40deg);
 }
 
+/* Right arm2 position */
 .right-arm2 {
   top: 120px;
   right: 70px;
   transform: rotate(40deg);
 }
 
+/* Left leg2 position */
 .left-leg2 {
   top: 190px;
   left: 70px;
   transform: rotate(-35deg);
 }
 
+/* Right leg2 position */
 .right-leg2 {
   top: 190px;
   right: 70px;
   transform: rotate(35deg);
 }
 
-/* Story Text */
+/* =========================
+   Story Text Box
+   ========================= */
 .story-text {
   font-size: 1.5rem;
   color: #333;
@@ -370,7 +501,9 @@ textarea {
   letter-spacing: 0.5px;
 }
 
-/* Help Box */
+/* =========================
+   Help Box (Modal)
+   ========================= */
 .help-box {
   position: fixed;
   top: 20%;
@@ -385,6 +518,7 @@ textarea {
   min-width: 260px;
 }
 
+/* Close button for help box */
 .close-help {
   position: absolute;
   top: 8px;
@@ -399,6 +533,7 @@ textarea {
   color: #2196f3;
 }
 
+/* (Unused?) Button3 styles */
 button3 {
   padding: 8px 18px;
   font-size: 1.05rem;
@@ -419,7 +554,9 @@ button3:hover {
   transform: scale(1.07);
 }
 
-/* Responsive */
+/* =========================
+   Responsive Styles
+   ========================= */
 @media (max-width: 600px) {
   .title {
     font-size: 2.3rem;
@@ -440,11 +577,13 @@ button3:hover {
     width: 90vw;
   }
 
-  .stickman, .stickman2 {
+  .stickman,
+  .stickman2 {
     min-height: 180px;
   }
 
-  .head, .head2 {
+  .head,
+  .head2 {
     width: 60px;
     height: 60px;
   }

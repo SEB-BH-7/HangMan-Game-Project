@@ -5,14 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HangMan</title>
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>HOME</header>
 
+  <!-- Header section with navigation -->
+  <header class="header">
+    <a href="index.html" class="logo">Home</a>
+    <nav class="navbar">
+      <a href="Story.html">Play the game</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Main title -->
   <h1 class="title">HangMan</h1>
 
+  <!-- Stickman drawing for the game -->
   <div class="stickman">
     <div class="head"></div>
     <div class="body"></div>
@@ -22,24 +33,28 @@
     <div class="right-leg"></div>
   </div>
 
+  <!-- Play and Help buttons -->
   <div class="buttons">
     <button id="playBtn" class="play">Play</button>
     <button id="helpBtn" class="help">HELP!</button>
   </div>
 
+  <!-- Contact link -->
   <a href="contact.html" class="contact-link">contact us</a>
 
+  <!-- Link to external JavaScript file -->
   <script src="app.js"></script>
 
+  <!-- Help box (hidden by default) -->
   <div id="helpBox" class="help-box" style="display:none;">
-  <span id="closeHelp" class="close-help">&times;</span>
-  <h3>How to Play</h3>
-  <p>
-    - Guess the hidden word one letter at a time.<br>
-    - Each wrong guess brings Ahmed closer to danger.<br>
-    - You have limited tries, save Ahmed before it's too late!
-  </p>
-</div>
+    <span id="closeHelp" class="close-help">&times;</span>
+    <h3>How to Play</h3>
+    <p>
+      - Guess the hidden word one letter at a time.<br>
+      - Each wrong guess brings Ahmed closer to danger.<br>
+      - You have limited tries, save Ahmed before it's too late!
+    </p>
+  </div>
 
 </body>
 

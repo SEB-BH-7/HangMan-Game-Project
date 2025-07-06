@@ -2,40 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Ahmed!!</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-      .stickman.red .head,
-      .stickman.red .body,
-      .stickman.red .left-arm,
-      .stickman.red .right-arm,
-      .stickman.red .left-leg,
-      .stickman.red .right-leg {
-        border-color: red !important;
-        background: red !important;
-      }
-      #wrong-letters {
-        text-align: center;
-        margin-bottom: 10px;
-        color: #d32f2f;
-        font-size: 1.1rem;
-        min-height: 24px;
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save Ahmed!!</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Red color for stickman parts when in 'red' state */
+    .stickman.red .head,
+    .stickman.red .body,
+    .stickman.red .left-arm,
+    .stickman.red .right-arm,
+    .stickman.red .left-leg,
+    .stickman.red .right-leg {
+      border-color: red !important;
+      background: red !important;
+    }
+
+    /* Styling for wrong letters display */
+    #wrong-letters {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #d32f2f;
+      font-size: 1.1rem;
+      min-height: 24px;
+    }
+  </style>
 </head>
 
 <body>
-    <button class="exit-button" onclick="window.location.href='difficulty.html'">← Exit</button>
-    <h1 class="title3">Save Ahmed!</h1>
-    <div id="attempts" style="font-size:1.2rem; margin-bottom:10px;"></div>
-    <div id="wrong-letters"></div>
-    <div id="hangman-drawing"></div>
-    <div id="word"></div>
-    <div id="letters"></div>
-    <div id="message"></div>
-    <button id="restartBtn" style="display:none;">Restart</button>
-    
-    <script src="app.js"></script>
+  <!-- Exit button to go back to difficulty selection -->
+  <button class="exit-button" onclick="window.location.href='difficulty.html'">← Exit</button>
+  <!-- Game title -->
+  <h1 class="title3">Save Ahmed!</h1>
+  <!-- Attempts left display -->
+  <div id="attempts" style="font-size:1.2rem; margin-bottom:10px;"></div>
+  <!-- Wrong letters guessed -->
+  <div id="wrong-letters"></div>
+  <!-- Hangman drawing will be rendered here -->
+  <div id="hangman-drawing"></div>
+  <!-- Word to guess (with blanks and revealed letters) -->
+  <div id="word"></div>
+  <!-- Letter buttons for guessing -->
+  <div id="letters"></div>
+  <!-- Message area for win/lose/game messages -->
+  <div id="message"></div>
+  <!-- Restart button, hidden by default -->
+  <button id="restartBtn" style="display:none;">Restart</button>
+  <!-- Hint button -->
+  <button id="hintBtn" style="margin: 10px auto; display: block;">Hint</button>
+
+  <!-- Main game logic -->
+  <script src="app.js"></script>
 </body>
