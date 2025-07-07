@@ -11,12 +11,19 @@
 
 <body>
 
+  <audio id="sfx-click" src="audio/click.mp3" preload="auto"></audio>
+
+
+  <audio id="bg-music" src="audio/music1.mp3" hidden></audio>
+
+
   <!-- Header section with navigation -->
   <header class="header">
     <a href="index.html" class="logo">Home</a>
     <nav class="navbar">
       <a href="Story.html">Play the game</a>
       <a href="contact.html">Contact Us</a>
+      <a href="#" id="playMusicLink">🔊</a>
     </nav>
   </header>
 
@@ -42,7 +49,6 @@
   <!-- Contact link -->
   <a href="contact.html" class="contact-link">contact us</a>
 
-  <!-- Link to external JavaScript file -->
   <script src="app.js"></script>
 
   <!-- Help box (hidden by default) -->

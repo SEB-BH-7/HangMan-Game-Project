@@ -12,6 +12,19 @@ const attemptsDiv = document.getElementById("attempts");
 const wrongLettersDiv = document.getElementById("wrong-letters");
 const hintBtn = document.getElementById("hintBtn");
 
+// --- Sound Effects ---
+const sfxClick = document.getElementById("sfx-click");
+const sfxError = document.getElementById("sfx-error");
+const sfxWin = document.getElementById("sfx-win");
+const sfxLose = document.getElementById("sfx-lose");
+
+function playSound(audio) {
+  if (audio) {
+    audio.currentTime = 0;
+    audio.play().catch(() => { }); // prevent errors if autoplay is blocked
+  }
+}
+
 // --- Game State ---
 // Variables to track the current game state
 let chosenWord = "";           // The word to guess
@@ -186,34 +199,42 @@ function updateWrongLetters() {
 // Handles a letter guess by the player
 function handleGuess(letter) {
   if (gameOver || guessedLetters.includes(letter)) return;
+
   guessedLetters.push(letter);
+  playSound(sfxClick); // ✅ Play click sound for any valid guess
 
   if (chosenWord.includes(letter)) {
     displayWord();
+
     // Check if all letters have been guessed
     if (chosenWord.split("").every(l => guessedLetters.includes(l))) {
       messageDiv.textContent = "🎉 You saved Ahmed!";
       gameOver = true;
+      playSound(sfxWin); // ✅ WIN sound
       if (restartBtn) restartBtn.style.display = "inline-block";
       if (hintBtn) hintBtn.disabled = true;
     }
   } else {
     wrongGuesses++;
     wrongLetters.push(letter);
+    playSound(sfxError); // ❌ Wrong guess sound
     hangmanDiv.innerHTML = hangmanStages[wrongGuesses];
     updateAttempts();
     updateWrongLetters();
-    // Check if player has lost
+
     if (wrongGuesses >= maxWrong) {
       messageDiv.textContent = `💀 Game Over! The word was: ${chosenWord}`;
       gameOver = true;
+      playSound(sfxLose); // ❌ LOSE sound
       displayWord();
       if (restartBtn) restartBtn.style.display = "inline-block";
       if (hintBtn) hintBtn.disabled = true;
     }
   }
+
   displayLetters();
 }
+
 
 // Reveals a random unguessed letter as a hint
 function useHint() {
@@ -241,3 +262,62 @@ function useHint() {
     }
   }, 1200);
 }
+
+// --- Music & Sound Effects --- 
+
+document.addEventListener("DOMContentLoaded", () => {
+  // === Music 1 — for home, story, difficulty pages ===
+  const music1 = document.getElementById("bg-music");
+  const toggleBtn1 = document.getElementById("playMusicLink");
+
+  if (music1 && toggleBtn1) {
+    music1.volume = 0.3;
+
+    toggleBtn1.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (music1.paused) {
+        music1.play().then(() => {
+          toggleBtn1.textContent = "🔇";
+        }).catch(err => {
+          console.warn("Autoplay blocked:", err);
+        });
+      } else {
+        music1.pause();
+        toggleBtn1.textContent = "🔊";
+      }
+    });
+  }
+
+  // === Music 2 — for game page only ===
+  const music2 = document.getElementById("bg-music2");
+  const toggleBtn2 = document.getElementById("toggleMusic2");
+
+  if (music2 && toggleBtn2) {
+    music2.volume = 0.3;
+
+    toggleBtn2.addEventListener("click", () => {
+      if (music2.paused) {
+        music2.play().then(() => {
+          toggleBtn2.textContent = "🔇";
+        }).catch(err => {
+          console.warn("Autoplay blocked:", err);
+        });
+      } else {
+        music2.pause();
+        toggleBtn2.textContent = "🔊";
+      }
+    });
+  }
+});
+
+// Load the click sound once
+const globalClickAudio = new Audio("audio/click.mp3");
+globalClickAudio.preload = "auto";
+globalClickAudio.volume = 0.6;
+
+// Play click sound on any mouse click
+document.addEventListener("click", () => {
+  globalClickAudio.currentTime = 0;
+  globalClickAudio.play().catch(() => {});
+});
