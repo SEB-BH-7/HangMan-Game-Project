@@ -12,6 +12,7 @@ Hangman – Save Ahmed! is a browser-based game crafted with HTML, CSS, and Java
 - Contact form
 - Help popup
 - Unique character-driven story
+- Musics and sound effects
 
 ## 🚀 Getting Started
 
@@ -19,7 +20,6 @@ Hangman – Save Ahmed! is a browser-based game crafted with HTML, CSS, and Java
 
 - **Planning Materials:**
     - User Stories
-    - Wireframe
     - How to Play
 
 ## 🎮 How to Play
@@ -40,12 +40,6 @@ Hangman – Save Ahmed! is a browser-based game crafted with HTML, CSS, and Java
 ## 📚 Attributions
 
 - Font: Comic Sans MS
-- Emojis: Unicode
 - Inspired by the classic Hangman game
 
-## 🚧 Next Steps
-
-- Add sound effects or background music
-
 [def]: screenshot.png
-
