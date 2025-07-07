@@ -4,18 +4,18 @@
 
 ## 🕹️ Description
 
-Hangman – Save Ahmed! is a fun and interactive browser game built with HTML, CSS, and JavaScript. Your mission: guess the hidden word before the stickman (Ahmed) meets his fate! Each incorrect guess brings Ahmed closer to danger, so think carefully!
+Hangman – Save Ahmed! is a browser-based game crafted with HTML, CSS, and JavaScript. Your goal: guess the hidden word before the stickman (Ahmed) is fully drawn! Each incorrect guess brings Ahmed closer to peril, so choose wisely.
 
 **Features:**
 - Animated, clean homepage
-- Difficulty selection (Easy, Medium, Hard)
+- Difficulty selection: Easy, Medium, Hard
 - Contact form
 - Help popup
-- Unique character story twist
+- Unique character-driven story
 
 ## 🚀 Getting Started
 
-- **Play it here:** _[Link coming soon!]_
+- **Play online:** https://seb-bh-7.github.io/HangMan-Game-Project/
 
 - **Planning Materials:**
     - User Stories
@@ -25,10 +25,10 @@ Hangman – Save Ahmed! is a fun and interactive browser game built with HTML, C
 ## 🎮 How to Play
 
 1. Click **Play** on the homepage.
-2. Select your preferred difficulty.
-3. Guess letters to reveal the hidden word.
-4. Each wrong guess adds a piece to Ahmed’s hangman.
-5. Save Ahmed before it’s too late!
+2. Choose your difficulty.
+3. Guess letters to uncover the word.
+4. Each wrong guess adds a part to Ahmed’s hangman.
+5. Save Ahmed before the drawing is complete!
 
 ## 💡 Technologies Used
 
@@ -45,6 +45,7 @@ Hangman – Save Ahmed! is a fun and interactive browser game built with HTML, C
 
 ## 🚧 Next Steps
 
-- Add sounds or background music
+- Add sound effects or background music
 
 [def]: screenshot.png
+

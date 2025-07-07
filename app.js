@@ -30,19 +30,27 @@ const WORDS = {
     "cat", "dog", "sun", "car", "book",
     "tree", "fish", "milk", "star", "bird",
     "cake", "shoe", "rain", "frog", "moon",
-    "ball", "duck", "leaf", "ship", "bear"
+    "ball", "duck", "leaf", "ship", "bear",
+    "hat", "cup", "pen", "desk", "lamp",
+    "door", "sock", "ring", "coin", "fork"
   ],
   medium: [
     "planet", "guitar", "window", "school", "garden",
-    "pencil", "rocket", "orange", "purple", "castle"
+    "pencil", "rocket", "orange", "purple", "castle",
+    "camera", "bottle", "pillow", "wallet", "bridge",
+    "ticket", "button", "candle", "mirror", "basket"
   ],
   hard: [
     "javascript", "hangman", "difficulty", "computer", "project",
-    "elephant", "umbrella", "triangle", "diamond", "library"
+    "elephant", "umbrella", "triangle", "diamond", "library",
+    "mountain", "strategy", "calendar", "sandwich", "hospital",
+    "language", "backpack", "airplane", "magazine", "refrigerator"
   ],
   extreme: [
     "xylophone", "quizzical", "mnemonic", "juxtapose", "zephyr",
-    "pneumonia", "subtlety", "syzygy", "flummox", "bizarre"
+    "pneumonia", "subtlety", "syzygy", "flummox", "bizarre",
+    "quixotic", "rhythm", "gazebo", "sphinx", "yacht",
+    "knapsack", "cryptic", "fjord", "Sesquipedalian", "Triskaidekaphobia"
   ]
 };
 
