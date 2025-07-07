@@ -646,12 +646,14 @@ button3:hover {
 
   /* Resize the main title */
   .title {
-    font-size: 2.2rem;
+    font-size: 3rem;
     margin-top: 100px;
+    font-family: 'Patrick Hand', cursive;
   }
 
   .title2 {
     font-size: 1.8rem;
+    
   }
 
   .title3 {
