@@ -627,6 +627,10 @@ button3:hover {
     padding: 12px 0;
   }
 
+  body {
+    font-family: 'Patrick Hand', cursive;
+  }
+
   header.header .navbar {
     flex-direction: row;
   }
